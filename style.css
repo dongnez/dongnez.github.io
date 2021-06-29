@@ -7,6 +7,48 @@
 /*Barra navegación*/
 #nav-container{
     background: lightblue  no-repeat fixed center;
+
+}
+
+#nav-container nav li{
+    display: inline-block;
+    padding: 1rem;
+
+    
+    font-size: 25px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: padding 1s ,font-size 1s ;
+
+}
+
+#nav-container nav li:hover{
+    color: #0091ea;
+    scale: 120%;
+    
+}
+
+#nav-container a{
+    text-decoration: none;
+    
 }
 
 
+
+
+.text-container{
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr) ); /*   auto-fit vs auto-fill        :se diferencia con auto-fit porque auto-fit lo llena todo*/
+    
+}
+
+.text-field{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: all 0.5s;
+}
