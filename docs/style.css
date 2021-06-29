@@ -24,16 +24,12 @@
 
 #nav-container nav li:hover{
     color: #0091ea;
-    scale: 120%;
     
 }
 
 #nav-container a{
     text-decoration: none;
-    
 }
-
-
 
 
 .text-container{
@@ -52,3 +48,4 @@
     text-align: center;
     transition: all 0.5s;
 }
+
