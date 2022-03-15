@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 /*Header*/
 
 
@@ -7,14 +12,12 @@
 /*Barra navegación*/
 #nav-container{
     background: lightblue  no-repeat fixed center;
-
+    width: 100%;
 }
 
 #nav-container nav li{
     display: inline-block;
     padding: 1rem;
-
-    
     font-size: 25px;
     text-decoration: none;
     cursor: pointer;
@@ -31,8 +34,10 @@
     text-decoration: none;
 }
 
+/*Cuerpo*/
 
 .text-container{
+    margin-top: 10px;
     display: grid;
     gap: 1rem;
     grid-auto-rows: 22rem;
