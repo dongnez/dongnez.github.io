@@ -1,3 +1,4 @@
 export default {
-	'prueba':'Prueba En Español'
-}
+	'navbar-about':'Sobre mi',
+
+} 

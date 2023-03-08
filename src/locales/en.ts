@@ -1,3 +1,3 @@
 export default {
-	'prueba':'Prueba'
+	'navbar-about':'About me'
 }

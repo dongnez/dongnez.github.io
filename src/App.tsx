@@ -1,22 +1,13 @@
-import Dotnez from "./components/Dotnez"
-import Header from "./modules/header/Header"
-import { useTranslation } from "react-i18next"
-     
+import { RouterProvider, createBrowserRouter} from "react-router-dom"
+import { router } from "./routes/router"
+
 
 function App() {
   
-  const {t} = useTranslation();
-
-
   return (
-    <div className="">
-      {/* <Dotnez   /> */}
-      
-      <Header/>
-      <p>{t('prueba')}</p>
-
-
-    </div>
+    <>
+    <RouterProvider router={router}/>
+    </>
   )
 }
 
