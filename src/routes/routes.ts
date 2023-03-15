@@ -9,7 +9,7 @@ export const routes:Array<RouteType> = [
 		route:'/'
 	},
 	{
-		name:'About',
+		name:'About me',
 		route:'about'
 	},
 	{

@@ -6,9 +6,10 @@ interface DropDownProps {
   options: Array<string>;
   onValueSelect: (option: string) => void;
   Icon?: ReactNode;
+  selectedLan:string
 }
-export function SelectDropDown({ options, Icon }: DropDownProps) {
-  const [selected, setSelected] = useState(options[0]);
+export function SelectDropDown({ options, Icon, onValueSelect, selectedLan}: DropDownProps) {
+  const [selected, setSelected] = useState(selectedLan);
   return (
     <Listbox value={selected} onChange={setSelected}>
       <div className="relative">
@@ -35,9 +36,11 @@ export function SelectDropDown({ options, Icon }: DropDownProps) {
             {options.map((option, index) => (
               <Listbox.Option
                 key={index}
+                onClick={()=>onValueSelect(option)}
                 className={({ active }) =>
                   `relative cursor-default select-none py-2  text-center
-                    ${active ? "bg-green-200" : "text-gray-900"}
+                    hover:bg-gray-200 duration-300 
+                    ${selected && "text-black font-medium" }
                     `
                 }
                 value={option}>

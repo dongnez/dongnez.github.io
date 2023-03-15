@@ -1,4 +1,5 @@
 export default {
-	'navbar-about':'Sobre mi',
-
+	'Home':'Inicio',
+	'Proyects':'Proyectos',
+	'About me':'Sobre mi',
 } 

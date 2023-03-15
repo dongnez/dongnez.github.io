@@ -6,17 +6,20 @@ import { NavLink } from "react-router-dom";
 import { routes } from "@/routes/routes";
 import { SelectDropDown } from "@/components/SelectDropDown";
 
-export const Header = () => {
+export const Navbar = () => {
   function changeSelect(option: string) {
     const language = option;
     changeLanguage(language);
   }
 
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
+
+  console.log('Lang',i18n.language)
 
   return (
-    <header className="flex p-5 items-center bg-white ">
+    <nav className="flex p-5 items-center bg-white ">
       <SelectDropDown
+        selectedLan={i18n.language}
         Icon={<MdLanguage />}
         options={["ES", "EN"]}
         onValueSelect={(option) => changeSelect(option)}
@@ -25,18 +28,19 @@ export const Header = () => {
       <div className="flex-1" />
 
       <section className="flex gap-4">
-        {routes.map((route) => (
+        {routes.map((route,index) => (
           <NavLink
+            key={index}
             className={({ isActive }) =>
               `px-2 py-1 rounded-sm hover:text-primary-500 duration-300 ${
                 isActive && "text-primary-500"
               }`
             }
             to={route.route}>
-            <span className="font-semibold">{route.name}</span>
+            <span className="font-semibold">{t(route.name)}</span>
           </NavLink>
         ))}
       </section>
-    </header>
+    </nav>
   );
 };

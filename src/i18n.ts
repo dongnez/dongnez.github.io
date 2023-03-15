@@ -5,10 +5,10 @@ import { translationEN,translationES } from "./locales";
 
 // the translations
 const resources = {
-  en: {
+  EN: {
     translation: translationEN
   },
-  es: {
+  ES: {
     translation: translationES
   }
 };
@@ -19,9 +19,8 @@ i18n
   .init({
     resources,
     fallbackLng: "es", // use en if detected lng is not available
-
     keySeparator: false, // we do not use keys in form messages.welcome
-
+    
     interpolation: {
       escapeValue: false // react already safes from xss
     }
