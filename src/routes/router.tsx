@@ -1,4 +1,4 @@
-import { About, Home, Proyects } from "@/pages";
+import { Home, Proyects, Contact } from "@/pages";
 import Root from "@/pages/Root";
 import ErrorPage from "@/pages/error/ErrorPage";
 import { createBrowserRouter } from "react-router-dom";
@@ -14,15 +14,13 @@ export const router  = createBrowserRouter( [
 				element: <Home/>
 			},
 			{
-				path:'about',
-				element: <About/>
-			},
-			{
 				path:'proyects',
 				element: <Proyects/>
 			},
+			{
+				path:'contact',
+				element: <Contact/>
+			},
 		]
-
-
 	}
 ]);

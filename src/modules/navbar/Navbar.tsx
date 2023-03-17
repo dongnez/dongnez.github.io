@@ -14,12 +14,10 @@ export const Navbar = () => {
 
   const { t,i18n } = useTranslation();
 
-  console.log('Lang',i18n.language)
-
   return (
     <nav className="flex p-5 items-center bg-white ">
       <SelectDropDown
-        selectedLan={i18n.language}
+        selected={i18n.language}
         Icon={<MdLanguage />}
         options={["ES", "EN"]}
         onValueSelect={(option) => changeSelect(option)}
@@ -32,10 +30,8 @@ export const Navbar = () => {
           <NavLink
             key={index}
             className={({ isActive }) =>
-              `px-2 py-1 rounded-sm hover:text-primary-500 duration-300 ${
-                isActive && "text-primary-500"
-              }`
-            }
+            `px-2 py-1 rounded-sm hover:text-primary-500 duration-300 
+            ${isActive && "text-primary-500"}`}
             to={route.route}>
             <span className="font-semibold">{t(route.name)}</span>
           </NavLink>

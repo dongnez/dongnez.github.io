@@ -1,6 +1,6 @@
 interface RouteType{
 	route:string,
-	name:string
+	name:string,
 }
 
 export const routes:Array<RouteType> = [
@@ -9,11 +9,11 @@ export const routes:Array<RouteType> = [
 		route:'/'
 	},
 	{
-		name:'About me',
-		route:'about'
-	},
-	{
 		name:'Proyects',
 		route:'proyects'
+	},
+	{
+		name:'Contact',
+		route:'contact',
 	},
 ]
