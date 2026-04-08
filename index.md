@@ -1,6 +1,8 @@
 title: My Portfolio
 ---
 
+<link rel="stylesheet" href="style.css">
+
 # Dongnez
 
 - [About](#about)
